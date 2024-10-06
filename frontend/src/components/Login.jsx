@@ -1,14 +1,21 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiOutlineLockClosed } from 'react-icons/hi'
 import { IoMailOutline } from 'react-icons/io5'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 function Login() {
   const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(()=>{
+    console.log(location.pathname)
+    cookie
+    navigate("/home/all-emp")
+  },[])
+
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(e.target.elements.email?.value);
     const email= e.target.elements.email?.value
     const password = e.target.elements.password?.value
     

@@ -10,7 +10,6 @@ function AllEmployees() {
   const [showUpdateEmp, setShowUpdateEmp] = useState();
 
   const handleViewEmp = (item) => {
-    console.log(item, "item");
     setSelectedEmp(item);
     setViewEmp(true);
   };

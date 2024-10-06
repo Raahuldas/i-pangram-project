@@ -4,14 +4,13 @@ import { FaPlus } from "react-icons/fa6";
 import AddEmployee from "./modals/AddEmployee";
 
 function DeptEmployees() {
-  const { deptEmp,fetchAllEmployees } = useContext(Context);
-  console.log(deptEmp, "+++++++");
+  const { deptEmp } = useContext(Context);
 
   const [showAddEmp, setShowAddEmp] = useState();
-  //   const [deptId, setDeptId] = useState("")
+  
 
-  const handleShowAddEmp = (item) => {
-    // setDeptId(item)
+  const handleShowAddEmp = () => {
+    
     setShowAddEmp(true);
   };
 

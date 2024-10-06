@@ -8,8 +8,6 @@ function AddEmployee(props) {
     const {allEmp,fetchAllEmployees} = useContext(Context)
     const deptId = props.deptEmp._id;
     
-console.log(allEmp, deptId,"all emp");
-
 const handleAddEmpInDept =async (empId) => {
     try {
         const res = await axios.post(`http://localhost:8000/api/department/add-emp/${deptId}/${empId}`,

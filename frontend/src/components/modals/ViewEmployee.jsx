@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Card, Modal } from "react-bootstrap";
 
 function ViewEmployee(props) {
-  console.log(props, "props");
 
   return (
     <Modal
