@@ -52,4 +52,4 @@
 
 6. The app's frontend should now be running on `http://localhost:5173`.
 
-7. The app's frontend should now be running on `http://localhost:8000`.
+7. The app's backend should now be running on `http://localhost:8000`.
