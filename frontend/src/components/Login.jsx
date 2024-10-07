@@ -8,11 +8,7 @@ function Login() {
   const navigate = useNavigate()
   const location = useLocation()
 
-  useEffect(()=>{
-    console.log(location.pathname)
-    cookie
-    navigate("/home/all-emp")
-  },[])
+  
 
   const handleLogin = async (e) => {
     e.preventDefault();

@@ -4,11 +4,15 @@ import { FaPlus } from "react-icons/fa6";
 import CreateDepartment from "./modals/CreateDepartment";
 import UpdateDepartment from "./modals/UpdateDepartment";
 import Context from "../store/Context";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import Cookies from "js-cookie"
 
 function Home() {
-  const {setDeptEmp} = useContext(Context)
-  const navigate = useNavigate()
+  const { setDeptEmp } = useContext(Context);
+  const navigate = useNavigate();
+  const location = useLocation()
+
+
 
   const [showCreateDepartment, setShowCreateDepartment] = useState(false);
   const [showUpdateDepartment, setShowUpdateDepartment] = useState();
@@ -42,9 +46,9 @@ function Home() {
   }, []);
 
   const handleViewDepartment = (item) => {
-setDeptEmp(item);
-navigate("/home/dept-emp")
-  }
+    setDeptEmp(item);
+    navigate("/home/dept-emp");
+  };
 
   const handleDeleteDepartment = async (deptId) => {
     try {
@@ -53,7 +57,7 @@ navigate("/home/dept-emp")
         { withCredentials: true }
       );
       console.log(res.data.data);
-      
+
       alert("Department deleted successfully");
       handleFetchAllDepartments();
     } catch (error) {
